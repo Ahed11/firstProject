@@ -32,5 +32,5 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/home', [CounrtyController::class, 'index']);
-Route::get('/{id}/food', [FoodController::class, 'food']);
+Route::get('/home', [CounrtyController::class, 'index'])->name('country');
+Route::get('/{id}/food', [FoodController::class, 'food'])->name('foods');
